@@ -35,8 +35,8 @@
   			name,
   			username,
   			password,
-  			create_code,
-  			update_code
+  			create_date,
+  			update_date
   		from
   			user_mst
   		where
