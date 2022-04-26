@@ -8,4 +8,3 @@ bLogo.onclick = () => {
 profileImg.onclick = () => {
 	location.href = "/app/account/profile";
 }
-
