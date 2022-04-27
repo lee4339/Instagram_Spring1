@@ -174,6 +174,7 @@
 
         </footer>
     </section>
+    <script type="text/javascript" src="/app/static/js/principal.js"></script>
     <script type="text/javascript" src="/app/static/js/account.js"></script>
 </body>
 
