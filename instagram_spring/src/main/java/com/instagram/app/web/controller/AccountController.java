@@ -3,6 +3,7 @@ package com.instagram.app.web.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.instagram.app.auth.PrincipalService;
+import com.instagram.app.domain.user.User;
 import com.instagram.app.service.ProfileService;
 import com.instagram.app.web.dto.account.AccountResponseDto;
 import com.instagram.app.web.dto.account.AccountUpdateReqDto;
+import com.instagram.app.web.dto.account.PasswordUpadteReqDto;
 
 @Controller
 public class AccountController {
@@ -37,6 +40,15 @@ public class AccountController {
 			session.setAttribute("principal", principalService.loadUserByUsername(accountUpdateReqDto.getUsername()));
 		}
 		return Boolean.toString(result);
-		
+	}
+	@ResponseBody
+	@RequestMapping(value = "/profile/account/password/update", method = RequestMethod.PUT)
+	public String updateAccountPassword(@RequestBody PasswordUpadteReqDto passwordUpadteReqDto, HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		User user = (User)session.getAttribute("principal");
+		if(!BCrypt.checkpw(passwordUpadteReqDto.getOriginPassword(), user.getPassword())) {
+			return "false";
+		}
+		return Boolean.toString(profileService.updatePassword(user, passwordUpadteReqDto));
 	}
 }

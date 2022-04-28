@@ -26,4 +26,9 @@ public class PageController {
 	public String getAccount() {
 		return "profile/account/account";
 	}
+	
+	@RequestMapping(value = "/profile/account/password", method = RequestMethod.GET)
+	public String getAccountPassword() {
+		return "profile/account/account_password";
+	}
 }
