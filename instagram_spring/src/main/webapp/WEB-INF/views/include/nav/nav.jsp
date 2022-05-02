@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/app/static/css/style.css">
     <link rel="stylesheet" href="/app/static/css/nav.css">
     <script src="https://kit.fontawesome.com/ede2458143.js" crossorigin="anonymous"></script>
+   	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
             <nav class="nav-container">
@@ -26,6 +27,7 @@
                 </div>
             </nav>
             
+            <script src="/app/static/js/principal.js"></script>
             <script src="/app/static/js/nav.js"></script>
             
             
