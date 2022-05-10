@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>instagram</title>
-    <link rel="stylesheet" href="/app/static/css/style.css">
-    <link rel="stylesheet" href="/app/static/css/signup.css">
+    <link rel="stylesheet" href="/geonho/static/css/style.css">
+    <link rel="stylesheet" href="/geonho/static/css/signup.css">
     <script src="https://kit.fontawesome.com/c857b9086a.js" crossorigin="anonymous"></script>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
@@ -21,8 +21,8 @@
             <div class="content-box">
                 <div class="item-box">
                     <div class="item-group">
-                        <h1 class="b-logo"><img src="/app/static/images/instagram_logo.PNG"></h1>
-                        <form action="/app/auth/signup" method="post">
+                        <h1 class="b-logo"><img src="/geonho/static/images/instagram_logo.PNG"></h1>
+                        <form action="/geonho/auth/signup" method="post">
                             <div class="signup-items">
                                 <h2 class="signup-title">친구들의 사진과 동영상을 보려면 가입하세요.</h2>
                                 <div class="facebook-login">
@@ -74,16 +74,16 @@
                         </form>
                     </div>
                     <div class="item-group">
-                        <p>계정이 있으신가요? <a href="/app/auth/signin">로그인</a></p>
+                        <p>계정이 있으신가요? <a href="/geonho/auth/signin">로그인</a></p>
                     </div>
                     <div class="download-img">
-                        <img src="/app/static/images/download.PNG">
+                        <img src="/geonho/static/images/download.PNG">
                     </div>
                 </div>
             </div>
         </main>
     </section>
-    <script src="/app/static/js/signup.js"></script>
+    <script src="/geonho/static/js/signup.js"></script>
 </body>
 
 </html>
